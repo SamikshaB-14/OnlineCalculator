@@ -39,6 +39,9 @@ src
 │       ├── templates
 │       │   ├── home.html                         # The main page with calculator formHow to Use
 
+
+
+
     On the Home Page:
         Enter two numbers (Num1 and Num2).
         Select an operation (Addition, Subtraction, Multiplication, Division, Remainder).
