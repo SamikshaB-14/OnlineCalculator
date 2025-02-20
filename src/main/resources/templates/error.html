@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; color: red; }
+        .error-box { margin-top: 50px; font-size: 20px; }
+    </style>
+</head>
+<body>
+    <div class="error-box">
+        <h2>Oops! Something went wrong</h2>
+        <p th:text="${error}"></p>
+        <a href="/">Try Again</a>
+    </div>
+</body>
+</html>

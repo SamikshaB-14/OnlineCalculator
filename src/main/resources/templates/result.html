@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result Page</title>
+	<style>
+		body {
+			font-family: cursive;
+			text-align: center;
+			margin-top: 50px;
+			background-color: #1e1e1e;
+			color: white;
+		}
+		.calculator {
+			display: inline-block;
+			text-align: center;
+			padding: 20px;
+			border: 2px solid #444;
+			border-radius: 10px;
+			width: 350px;
+			background-color: #333;
+			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+		}
+		.result {
+			font-size: 22px;
+			font-weight: bold;
+			margin: 15px 0;
+			padding: 10px;
+			border-radius: 5px;
+			background: linear-gradient(to right, #00c6ff, #0072ff);
+			color: white;
+			display: inline-block;
+		}
+		label {
+			display: block;
+			margin-top: 10px;
+			font-size: 18px;
+		}
+		input {
+			width: 90%;
+			padding: 8px;
+			margin-top: 5px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			background-color: #555;
+			color: white;
+		}
+		.buttons {
+			margin-top: 15px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px;
+		}
+		button {
+			width: 140px;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			color: white;
+			background-color: #007BFF;
+			transition: 0.3s;
+		}
+		button:hover {
+			background-color: #0056b3;
+		}
+	</style>
+</head>
+<body>
+	<h1>Calculation Result</h1>
+	<div class="calculator">
+		<p>Result of <span th:text="${operation}" class="result"></span></p>
+		<p class="result">Is <span th:text="${res}"></span></p>
+		<br>
+		<form action="/calculate" method="post">
+			<label>Num1:</label>
+			<input type="number" name="num1" required/><br>
+			<label>Num2:</label>
+			<input type="number" name="num2" required/> <br><br>
+			<div class="buttons">
+				<button type="submit" name="operation" value="add">Addition</button>
+				<button type="submit" name="operation" value="sub">Subtraction</button>
+				<button type="submit" name="operation" value="mul">Multiplication</button>
+				<button type="submit" name="operation" value="division">Division</button>
+				<button type="submit" name="operation" value="mod">Remainder</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
